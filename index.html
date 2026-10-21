@@ -14,7 +14,7 @@
             --accent-sage: #e8efe9;
             --accent-sage-dark: #2c3e35;
             --accent-soft-warm: #f4efe8;
-            --header-bg: rgba(250, 249, 245, 0.85);
+            --header-bg: rgba(250, 249, 245, 0.9);
             --shadow-sm: 0 4px 16px rgba(0,0,0,0.03);
             --shadow-md: 0 12px 32px rgba(0,0,0,0.06);
         }
@@ -26,9 +26,9 @@
             --card-bg: #1c1c1e;
             --border-color: #2c2c2e;
             --accent-sage: #1e2e24;
-            --accent-sage-dark: #86a992;
+            --accent-sage-dark: #9bbca6;
             --accent-soft-warm: #262320;
-            --header-bg: rgba(18, 18, 20, 0.85);
+            --header-bg: rgba(18, 18, 20, 0.9);
             --shadow-sm: 0 4px 16px rgba(0,0,0,0.3);
             --shadow-md: 0 12px 32px rgba(0,0,0,0.4);
         }
@@ -39,18 +39,17 @@
         header { background: var(--header-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border-color); padding: 16px 8%; display: flex; justify-content: space-between; align-items: center; }
         .logo { font-weight: 600; font-size: 1.05rem; letter-spacing: -0.01em; color: var(--text-main); }
         
-        .nav-container { display: flex; gap: 24px; align-items: center; }
+        .nav-container { display: flex; gap: 20px; align-items: center; }
         .nav-links { display: flex; gap: 20px; font-size: 0.9rem; align-items: center; }
         .nav-links a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; font-weight: 400; }
         .nav-links a:hover { color: var(--text-main); }
         
-        .theme-toggle { background: var(--border-color); border: none; color: var(--text-main); padding: 8px 12px; border-radius: 20px; cursor: pointer; font-size: 0.85rem; display: flex; align-items: center; gap: 6px; transition: background 0.2s; }
-        .theme-toggle:hover { opacity: 0.8; }
+        .theme-toggle { background: var(--accent-sage); border: 1px solid var(--border-color); color: var(--text-main); padding: 8px 14px; border-radius: 20px; cursor: pointer; font-size: 0.85rem; font-weight: 500; display: flex; align-items: center; gap: 6px; transition: all 0.2s; }
+        .theme-toggle:hover { opacity: 0.85; transform: scale(1.02); }
 
         .cta-btn { background: var(--text-main); color: var(--bg-color); padding: 9px 18px; border-radius: 22px; font-weight: 500; text-decoration: none; font-size: 0.85rem; transition: opacity 0.2s; }
         .cta-btn:hover { opacity: 0.85; }
 
-        /* Hero Layout ze zdjęciem po prawej w specjalnej karcie */
         .hero { max-width: 1060px; margin: 50px auto 30px; padding: 0 24px; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; }
         .hero-text h1 { font-size: 3.2rem; font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 24px; }
         
@@ -81,8 +80,8 @@
         .list-box { background: var(--accent-soft-warm); border: 1px solid var(--border-color); border-radius: 24px; padding: 30px; margin-bottom: 24px; }
         .list-box h3 { font-size: 1.2rem; font-weight: 600; margin-bottom: 16px; color: var(--text-main); }
         .list-box ul { list-style: none; }
-        .list-box ul li { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 10px; position: relative; padding-left: 20px; }
-        .list-box ul li::before { content: "—"; position: absolute; left: 0; color: var(--accent-sage-dark); font-weight: bold; }
+        .list-box ul li { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 12px; position: relative; padding-left: 22px; line-height: 1.5; }
+        .list-box ul li::before { content: "✓"; position: absolute; left: 0; color: var(--accent-sage-dark); font-weight: bold; }
 
         footer { text-align: center; padding: 60px 24px; color: var(--text-muted); font-size: 0.95rem; border-top: 1px solid var(--border-color); margin-top: 80px; background: var(--card-bg); }
         footer strong { color: var(--text-main); }
@@ -102,78 +101,4 @@
         <div class="nav-container">
             <nav class="nav-links">
                 <a href="#o-mnie">O mnie</a>
-                <a href="#oferta">Zakres pomocy</a>
-                <a href="#szkolenia">Szkolenia i Dorobek</a>
-                <a href="#kontakt">Kontakt</a>
-            </nav>
-            <button class="theme-toggle" id="themeToggle" aria-label="Przełącz motyw">
-                <span id="themeIcon">🌙</span> <span id="themeText">Ciemny</span>
-            </button>
-            <a href="#kontakt" class="cta-btn">Kontakt</a>
-        </div>
-    </header>
-
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Prywatny gabinet psychologiczny</h1>
-            <div class="quote-box">
-                <p>„Szczęście to zdolność wykorzystania tego, co zostało ti dane”</p>
-                <span>— Milton Erickson</span>
-            </div>
-            <p style="color: var(--text-muted); font-size: 1.08rem;">
-                Jestem psychologiem i biologiem. Prowadzę poradnictwo, konsultacje oraz psychoterapię w podejściu ericksonowskim. Pracuję pod stałą superwizją w Polskim Instytucie Ericksonowskim w Łodzi.
-            </p>
-        </div>
-        
-        <div class="hero-card">
-            <img src="ania.heic" alt="Mgr Anna Adamiak-Tazbir">
-            <div class="hero-card-caption">mgr Anna Adamiak-Tazbir</div>
-        </div>
-    </section>
-
-    <section class="section" id="o-mnie">
-        <h2 class="section-title">O mnie i kwalifikacje</h2>
-        <div class="grid-cards">
-            <div class="card">
-                <h3>Wykształcenie i Przynależność</h3>
-                <ul>
-                    <li>Mgr Anna Adamiak-Tazbir – Psycholog, biolog</li>
-                    <li>Kurs Psychoterapii atestowany przez Sekcję Naukową Psychoterapii Polskiego Towarzystwa Psychiatrycznego (2015–2020, Polski Instytut Ericksonowski)</li>
-                    <li>Członek Polskiego Towarzystwa Psychiatrycznego</li>
-                    <li>Członek Sekcji Naukowej Psychoterapii PTP</li>
-                    <li>Praca pod stałą superwizją w Polskim Instytucie Ericksonowskim w Łodzi</li>
-                </ul>
-            </div>
-            <div class="card">
-                <h3>Formy Pomocy</h3>
-                <ul>
-                    <li>Psychoterapia indywidualna</li>
-                    <li>Psychoterapia par i rodzinna</li>
-                    <li>Psychoterapia grupowa</li>
-                    <li>Warsztaty psychoedukacyjne</li>
-                    <li>Warsztaty terapeutyczne</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="oferta">
-        <h2 class="section-title">Zakres wsparcia</h2>
-        <div class="grid-cards">
-            <div class="card">
-                <h3>Kryzysy i Onkologia</h3>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">Porady, konsultacje i psychoterapia dla osób po kryzysach psychicznych oraz profesjonalna pomoc i wsparcie dla osób chorych onkologicznie.</p>
-            </div>
-            <div class="card">
-                <h3>Terapia Indywidualna i Par</h3>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">Pomoc osobom zgłaszającym niepowodzenia w związkach, praca nad relacjami, terapia rodzinna oraz praca z zaburzeniami osobowości i więzi.</p>
-            </div>
-            <div class="card">
-                <h3>Psychosomatyka i Stres</h3>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">Psychoterapia następstw stresu, praca z objawami psychosomatycznymi u dorosłych, dzieci i młodzieży oraz kontrola i spożytkowanie bólu z ciała.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="szkolenia">
-        <h2 class="section-title">Przebyte szkolenia
+                <a href="#
