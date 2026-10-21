@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mgr Anna Adamiak-Tazbir | Gabinet Psychologiczny</title>
+    <style>
+        :root {
+            --bg-color: #faf9f6;
+            --text-main: #1d1d1f;
+            --text-muted: #86868b;
+            --accent: #4a453f;
+            --card-bg: #ffffff;
+            --border-color: #e5e5ea;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; -webkit-font-smoothing: antialiased; padding: 0; }
+        header { background: rgba(250, 249, 246, 0.8); backdrop-filter: blur(20px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border-color); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 600; font-size: 0.95rem; letter-spacing: -0.01em; color: var(--text-main); }
+        .nav-links { display: flex; gap: 20px; align-items: center; font-size: 0.85rem; }
+        .nav-links a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
+        .nav-links a:hover { color: var(--text-main); }
+        .cta-btn { background: var(--text-main); color: #fff; padding: 8px 16px; border-radius: 20px; font-weight: 500; text-decoration: none; font-size: 0.85rem; }
+        .hero { max-width: 1000px; margin: 60px auto 40px; padding: 0 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+        .hero-text h1 { font-size: 2.8rem; font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 20px; }
+        .hero-text p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 30px; }
+        .hero-image img { width: 100%; border-radius: 24px; object-fit: cover; box-shadow: 0 20px 40px rgba(0,0,0,0.06); }
+        .section { max-width: 1000px; margin: 60px auto; padding: 0 20px; }
+        .section h2 { font-size: 1.8rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 30px; }
+        .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+        .card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 18px; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.02); transition: transform 0.2s; }
+        .card:hover { transform: translateY(-2px); }
+        .card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 10px; }
+        .card p { font-size: 0.85rem; color: var(--text-muted); }
+        footer { text-align: center; padding: 40px 20px; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--border-color); margin-top: 80px; }
+        @media(max-width: 768px) { .hero { grid-template-columns: 1fr; } .hero-text h1 { font-size: 2.2rem; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">ANNA ADAMIAK-TAZBIR</div>
+        <div class="nav-links">
+            <a href="#o-mnie">O mnie</a>
+            <a href="#metody">Metody</a>
+            <a href="#kontakt" class="cta-btn">Umów wizytę</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Przestrzeń na Twoją zmianę.</h1>
+            <p>Pomagam odzyskać ster w kryzysie, zrozumieć sygnały płynące z ciała i odnaleźć zasoby, które już w Tobie są. Bezpiecznie, po partnersku, w oparciu o podejście ericksonowskie.</p>
+            <a href="#kontakt" class="cta-btn" style="padding: 12px 24px; font-size: 0.95rem;">Skontaktuj się</a>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Mgr Anna Adamiak-Tazbir">
+        </div>
+    </section>
+
+    <section class="section" id="metody">
+        <h2>Filar doświadczenia – Metody i Warsztat</h2>
+        <div class="grid-cards">
+            <div class="card">
+                <h3>Podejście Ericksonowskie</h3>
+                <p>Nieświadome zasoby, metafora, hipnoza i głęboki szacunek dla historii pacjenta.</p>
+            </div>
+            <div class="card">
+                <h3>Praca z ciałem & Psychosomatyka</h3>
+                <p>Napięcia, ból, integracja oraz dialog z sygnałami płynącymi z organizmu.</p>
+            </div>
+            <div class="card">
+                <h3>Terapia Skoncentrowana na Rozwiązaniach</h3>
+                <p>Skupienie na celu, teraźniejszości i Twoich mocnych stronach.</p>
+            </div>
+            <div class="card">
+                <h3>Kryzys & Trauma</h3>
+                <p>Bezpieczne przepracowywanie trudnych doświadczeń i odzyskiwanie stabilizacji.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="o-mnie">
+        <h2>Kim jestem?</h2>
+        <div class="card" style="background: #fff; padding: 30px;">
+            <p style="font-size: 1rem; color: var(--text-main); margin-bottom: 15px;"><strong>Mgr Anna Adamiak-Tazbir</strong> – Psycholog, biolog, certyfikowana psychoterapeutka.</p>
+            <p style="color: var(--text-muted); font-size: 0.9rem;">Moja praca wyrasta z połączenia ścisłego, biologicznego rozumienia ludzkiego organizmu z humanistyczną refleksją nad psychiką. Pracuję pod stałą superwizją w Polskim Instytucie Ericksonowskim.</p>
+        </div>
+    </section>
+
+    <footer id="kontakt">
+        <p>Mgr Anna Adamiak-Tazbir • Łódź • tazbir.a@gmail.com • Tel. 600 080 239</p>
+    </footer>
+</body>
+</html>
