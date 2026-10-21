@@ -28,7 +28,7 @@
         .hero-text h1 { font-size: 3rem; font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 24px; }
         .quote { font-style: italic; color: var(--text-muted); font-size: 1.15rem; margin-bottom: 24px; border-left: 2px solid var(--text-main); padding-left: 16px; }
         .hero-image { text-align: center; }
-        .hero-image img { width: 100%; max-width: 280px; height: auto; border-radius: 20px; box-shadow: 0 12px 32px rgba(0,0,0,0.06); border: 1px solid var(--border-color); }
+        .hero-image img { width: 100%; max-width: 280px; height: auto; border-radius: 20px; box-shadow: 0 12px 32px rgba(0,0,0,0.06); border: 1px solid var(--border-color); object-fit: cover; }
 
         .section { max-width: 980px; margin: 60px auto; padding: 0 24px; }
         .section-title { font-size: 2rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 32px; }
@@ -44,6 +44,12 @@
         .timeline-content h4 { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
         .timeline-content p { font-size: 0.9rem; color: var(--text-muted); }
         .timeline-year { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); background: var(--bg-color); padding: 4px 12px; border-radius: 12px; white-space: nowrap; }
+
+        .list-box { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 18px; padding: 24px; margin-bottom: 20px; }
+        .list-box h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 14px; color: var(--text-main); }
+        .list-box ul { list-style: none; }
+        .list-box ul li { font-size: 0.92rem; color: var(--text-muted); margin-bottom: 8px; position: relative; padding-left: 18px; }
+        .list-box ul li::before { content: "—"; position: absolute; left: 0; color: var(--text-main); }
 
         footer { text-align: center; padding: 60px 24px; color: var(--text-muted); font-size: 0.9rem; border-top: 1px solid var(--border-color); margin-top: 80px; background: #fff; }
         footer strong { color: var(--text-main); }
@@ -63,7 +69,7 @@
         <div class="nav-links">
             <a href="#o-mnie">O mnie</a>
             <a href="#oferta">Zakres pomocy</a>
-            <a href="#szkolenia">Szkolenia</a>
+            <a href="#szkolenia">Szkolenia i Dorobek</a>
             <a href="#kontakt" class="cta-btn">Kontakt</a>
         </div>
     </header>
@@ -123,25 +129,4 @@
             </div>
             <div class="card">
                 <h3>Psychosomatyka i Stres</h3>
-                <p style="color: var(--text-muted); font-size: 0.95rem;">Psychoterapia następstw stresu, praca z objawami psychosomatycznymi u dorosłych, dzieci i młodzieży oraz kontrola i spożytkowanie bólu z ciała.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="section" id="szkolenia">
-        <h2 class="section-title">Przebyte szkolenia i metody pracy</h2>
-        
-        <div class="timeline-item">
-            <div class="timeline-content">
-                <h4>Letnia Szkoła Psychoterapii: Psychoterapia wobec bezradności i rozpaczy</h4>
-                <p>Laboratorium Psychoedukacji, Zegrze k. Warszawy</p>
-            </div>
-            <div class="timeline-year">2022</div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-content">
-                <h4>Wykładowca na Konferencji „Lęk i hipnoza kliniczna”</h4>
-                <p>Polski Instytut Ericksonowski, Łódź</p>
-            </div>
-            <div class="timeline-year">2022</div>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Psychoterapia następstw stresu, praca z objawami
