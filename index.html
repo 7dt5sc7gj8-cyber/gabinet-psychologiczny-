@@ -3,92 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mgr Anna Adamiak-Tazbir | Gabinet Psychologiczny</title>
+    <title>Mgr Anna Adamiak-Tazbir | Psycholog, Biolog, Psychoterapeuta</title>
     <style>
         :root {
             --bg-color: #faf9f6;
             --text-main: #1d1d1f;
-            --text-muted: #86868b;
-            --accent: #4a453f;
+            --text-muted: #6e6e73;
             --card-bg: #ffffff;
             --border-color: #e5e5ea;
+            --accent: #2c3e35;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; -webkit-font-smoothing: antialiased; padding: 0; }
-        header { background: rgba(250, 249, 246, 0.8); backdrop-filter: blur(20px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border-color); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; }
-        .logo { font-weight: 600; font-size: 0.95rem; letter-spacing: -0.01em; color: var(--text-main); }
-        .nav-links { display: flex; gap: 20px; align-items: center; font-size: 0.85rem; }
+        body { background-color: var(--bg-color); color: var(--text-main); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+        
+        header { background: rgba(250, 249, 246, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--border-color); padding: 18px 8%; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 600; font-size: 1rem; letter-spacing: -0.01em; color: var(--text-main); }
+        .nav-links { display: flex; gap: 24px; align-items: center; font-size: 0.9rem; }
         .nav-links a { color: var(--text-muted); text-decoration: none; transition: color 0.2s; }
         .nav-links a:hover { color: var(--text-main); }
-        .cta-btn { background: var(--text-main); color: #fff; padding: 8px 16px; border-radius: 20px; font-weight: 500; text-decoration: none; font-size: 0.85rem; }
-        .hero { max-width: 1000px; margin: 60px auto 40px; padding: 0 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
-        .hero-text h1 { font-size: 2.8rem; font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 20px; }
-        .hero-text p { font-size: 1.1rem; color: var(--text-muted); margin-bottom: 30px; }
-        .hero-image img { width: 100%; border-radius: 24px; object-fit: cover; box-shadow: 0 20px 40px rgba(0,0,0,0.06); }
-        .section { max-width: 1000px; margin: 60px auto; padding: 0 20px; }
-        .section h2 { font-size: 1.8rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 30px; }
-        .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-        .card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 18px; padding: 24px; box-shadow: 0 4px 12px rgba(0,0,0,0.02); transition: transform 0.2s; }
-        .card:hover { transform: translateY(-2px); }
-        .card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 10px; }
-        .card p { font-size: 0.85rem; color: var(--text-muted); }
-        footer { text-align: center; padding: 40px 20px; color: var(--text-muted); font-size: 0.85rem; border-top: 1px solid var(--border-color); margin-top: 80px; }
-        @media(max-width: 768px) { .hero { grid-template-columns: 1fr; } .hero-text h1 { font-size: 2.2rem; } }
+        .cta-btn { background: var(--text-main); color: #fff; padding: 10px 20px; border-radius: 22px; font-weight: 500; text-decoration: none; font-size: 0.85rem; transition: opacity 0.2s; }
+        .cta-btn:hover { opacity: 0.85; }
+
+        .hero { max-width: 980px; margin: 60px auto 40px; padding: 0 24px; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 48px; align-items: center; }
+        .hero-text h1 { font-size: 3rem; font-weight: 600; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 24px; }
+        .quote { font-style: italic; color: var(--text-muted); font-size: 1.15rem; margin-bottom: 24px; border-left: 2px solid var(--text-main); padding-left: 16px; }
+        .hero-image { text-align: center; }
+        .hero-image img { width: 100%; max-width: 280px; height: auto; border-radius: 20px; box-shadow: 0 12px 32px rgba(0,0,0,0.06); border: 1px solid var(--border-color); }
+
+        .section { max-width: 980px; margin: 60px auto; padding: 0 24px; }
+        .section-title { font-size: 2rem; font-weight: 600; letter-spacing: -0.02em; margin-bottom: 32px; }
+
+        .grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 20px; padding: 28px; box-shadow: 0 4px 16px rgba(0,0,0,0.02); }
+        .card h3 { font-size: 1.15rem; font-weight: 600; margin-bottom: 12px; }
+        .card ul { list-style-type: none; padding: 0; }
+        .card ul li { position: relative; padding-left: 20px; margin-bottom: 8px; color: var(--text-muted); font-size: 0.95rem; }
+        .card ul li::before { content: "•"; position: absolute; left: 0; color: var(--text-main); font-weight: bold; }
+
+        .timeline-item { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 16px; padding: 20px 24px; margin-bottom: 16px; display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; }
+        .timeline-content h4 { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
+        .timeline-content p { font-size: 0.9rem; color: var(--text-muted); }
+        .timeline-year { font-size: 0.85rem; font-weight: 600; color: var(--text-muted); background: var(--bg-color); padding: 4px 12px; border-radius: 12px; white-space: nowrap; }
+
+        footer { text-align: center; padding: 60px 24px; color: var(--text-muted); font-size: 0.9rem; border-top: 1px solid var(--border-color); margin-top: 80px; background: #fff; }
+        footer strong { color: var(--text-main); }
+
+        @media(max-width: 768px) {
+            .hero { grid-template-columns: 1fr; text-align: center; }
+            .hero-text h1 { font-size: 2.2rem; }
+            .quote { border-left: none; padding-left: 0; }
+            .timeline-item { flex-direction: column; gap: 8px; }
+        }
     </style>
 </head>
 <body>
+
     <header>
-        <div class="logo">ANNA ADAMIAK-TAZBIR</div>
+        <div class="logo">Mgr Anna Adamiak-Tazbir</div>
         <div class="nav-links">
             <a href="#o-mnie">O mnie</a>
-            <a href="#metody">Metody</a>
-            <a href="#kontakt" class="cta-btn">Umów wizytę</a>
+            <a href="#oferta">Zakres pomocy</a>
+            <a href="#szkolenia">Szkolenia</a>
+            <a href="#kontakt" class="cta-btn">Kontakt</a>
         </div>
     </header>
 
     <section class="hero">
         <div class="hero-text">
-            <h1>Przestrzeń na Twoją zmianę.</h1>
-            <p>Pomagam odzyskać ster w kryzysie, zrozumieć sygnały płynące z ciała i odnaleźć zasoby, które już w Tobie są. Bezpiecznie, po partnersku, w oparciu o podejście ericksonowskie.</p>
-            <a href="#kontakt" class="cta-btn" style="padding: 12px 24px; font-size: 0.95rem;">Skontaktuj się</a>
+            <h1>Prywatny gabinet psychologiczny</h1>
+            <div class="quote">
+                „Szczęście to zdolność wykorzystania tego, co zostało ci dane”
+                <br><span style="font-size: 0.9rem; font-style: normal; font-weight: 600;">— Milton Erickson</span>
+            </div>
+            <p style="color: var(--text-muted); font-size: 1.05rem;">
+                Jestem psychologiem i biologiem. Prowadzę poradnictwo, konsultacje oraz psychoterapię w podejściu ericksonowskim. Pracuję pod stałą superwizją w Polskim Instytucie Ericksonowskim w Łodzi.
+            </p>
         </div>
         <div class="hero-image">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80" alt="Mgr Anna Adamiak-Tazbir">
-        </div>
-    </section>
-
-    <section class="section" id="metody">
-        <h2>Filar doświadczenia – Metody i Warsztat</h2>
-        <div class="grid-cards">
-            <div class="card">
-                <h3>Podejście Ericksonowskie</h3>
-                <p>Nieświadome zasoby, metafora, hipnoza i głęboki szacunek dla historii pacjenta.</p>
-            </div>
-            <div class="card">
-                <h3>Praca z ciałem & Psychosomatyka</h3>
-                <p>Napięcia, ból, integracja oraz dialog z sygnałami płynącymi z organizmu.</p>
-            </div>
-            <div class="card">
-                <h3>Terapia Skoncentrowana na Rozwiązaniach</h3>
-                <p>Skupienie na celu, teraźniejszości i Twoich mocnych stronach.</p>
-            </div>
-            <div class="card">
-                <h3>Kryzys & Trauma</h3>
-                <p>Bezpieczne przepracowywanie trudnych doświadczeń i odzyskiwanie stabilizacji.</p>
-            </div>
+            <img src="https://static.wixstatic.com/media/8fa08e_2874bc0ef2d640fb871ff2be20dd81be~mv2.jpg" alt="Mgr Anna Adamiak-Tazbir">
         </div>
     </section>
 
     <section class="section" id="o-mnie">
-        <h2>Kim jestem?</h2>
-        <div class="card" style="background: #fff; padding: 30px;">
-            <p style="font-size: 1rem; color: var(--text-main); margin-bottom: 15px;"><strong>Mgr Anna Adamiak-Tazbir</strong> – Psycholog, biolog, certyfikowana psychoterapeutka.</p>
-            <p style="color: var(--text-muted); font-size: 0.9rem;">Moja praca wyrasta z połączenia ścisłego, biologicznego rozumienia ludzkiego organizmu z humanistyczną refleksją nad psychiką. Pracuję pod stałą superwizją w Polskim Instytucie Ericksonowskim.</p>
+        <h2 class="section-title">O mnie i kwalifikacje</h2>
+        <div class="grid-cards">
+            <div class="card">
+                <h3>Wykształcenie i Przynależność</h3>
+                <ul>
+                    <li>Mgr Anna Adamiak-Tazbir – Psycholog, biolog</li>
+                    <li>Kurs Psychoterapii atestowany przez Sekcję Naukową Psychoterapii Polskiego Towarzystwa Psychiatrycznego (2015–2020, Polski Instytut Ericksonowski)</li>
+                    <li>Członek Polskiego Towarzystwa Psychiatrycznego</li>
+                    <li>Członek Sekcji Naukowej Psychoterapii PTP</li>
+                    <li>Praca pod stałą superwizją w Polskim Instytucie Ericksonowskim w Łodzi</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Formy Pomocy</h3>
+                <ul>
+                    <li>Psychoterapia indywidualna</li>
+                    <li>Psychoterapia par i rodzinna</li>
+                    <li>Psychoterapia grupowa</li>
+                    <li>Warsztaty psychoedukacyjne</li>
+                    <li>Warsztaty terapeutyczne</li>
+                </ul>
+            </div>
         </div>
     </section>
 
-    <footer id="kontakt">
-        <p>Mgr Anna Adamiak-Tazbir • Łódź • tazbir.a@gmail.com • Tel. 600 080 239</p>
-    </footer>
-</body>
-</html>
+    <section class="section" id="oferta">
+        <h2 class="section-title">Zakres wsparcia</h2>
+        <div class="grid-cards">
+            <div class="card">
+                <h3>Kryzysy i Onkologia</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Porady, konsultacje i psychoterapia dla osób po kryzysach psychicznych oraz profesjonalna pomoc i wsparcie dla osób chorych onkologicznie.</p>
+            </div>
+            <div class="card">
+                <h3>Terapia Indywidualna i Par</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Pomoc osobom zgłaszającym niepowodzenia w związkach, praca nad relacjami, terapia rodzinna oraz praca z zaburzeniami osobowości i więzi.</p>
+            </div>
+            <div class="card">
+                <h3>Psychosomatyka i Stres</h3>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Psychoterapia następstw stresu, praca z objawami psychosomatycznymi u dorosłych, dzieci i młodzieży oraz kontrola i spożytkowanie bólu z ciała.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="szkolenia">
+        <h2 class="section-title">Przebyte szkolenia i metody pracy</h2>
+        
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h4>Letnia Szkoła Psychoterapii: Psychoterapia wobec bezradności i rozpaczy</h4>
+                <p>Laboratorium Psychoedukacji, Zegrze k. Warszawy</p>
+            </div>
+            <div class="timeline-year">2022</div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h4>Wykładowca na Konferencji „Lęk i hipnoza kliniczna”</h4>
+                <p>Polski Instytut Ericksonowski, Łódź</p>
+            </div>
+            <div class="timeline-year">2022</div>
